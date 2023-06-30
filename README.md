@@ -50,6 +50,7 @@ The received signal is analyzed based on the programming to produce the data on 
 The system not only identifies and filters pollutants based on their chemical, physical, and biological components but also provides advanced features. It continuously monitors the air, analyzes pollutants, and activates the appropriate filters for removal.
 This comprehensive approach ensures effective pollution detection and filtration, leading to improved air quality and a healthier environment. Additionally, the system displays the analyzed data on an LCD display, providing real-time information about the air composition. 
 Furthermore, the data is uploaded to a cloud platform such as ThingSpeak, enabling users from anywhere in the world to access and monitor the air quality data remotely. This feature enhances user convenience and facilitates better understanding and management of air pollution levels.
+
 # BIBLIOGRAPHY
 * https://lastminuteengineers.com/one-channel-relay-module-arduinotutorial/
 * https://cgrant.medium.com/using-the-esp8266-wifi-module-with-arduinouno-publishing-to-thingspeak-99fc77122e82
