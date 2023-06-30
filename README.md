@@ -50,6 +50,10 @@ The received signal is analyzed based on the programming to produce the data on 
 The system not only identifies and filters pollutants based on their chemical, physical, and biological components but also provides advanced features. It continuously monitors the air, analyzes pollutants, and activates the appropriate filters for removal.
 This comprehensive approach ensures effective pollution detection and filtration, leading to improved air quality and a healthier environment. Additionally, the system displays the analyzed data on an LCD display, providing real-time information about the air composition. 
 Furthermore, the data is uploaded to a cloud platform such as ThingSpeak, enabling users from anywhere in the world to access and monitor the air quality data remotely. This feature enhances user convenience and facilitates better understanding and management of air pollution levels.
+![PRODUCT CLOSED](https://github.com/HavocJames/smart-air-filter/assets/124689464/bb43fada-b797-4b9a-8612-4eccfe4fcccb)
+![OPEN FILTER](https://github.com/HavocJames/smart-air-filter/assets/124689464/453250fd-27c6-432a-a379-da86843574d9)
+
+https://github.com/HavocJames/smart-air-filter/assets/124689464/af3bdf20-267e-4e7f-8fb5-a5fa1b79639e
 
 # BIBLIOGRAPHY
 * https://lastminuteengineers.com/one-channel-relay-module-arduinotutorial/
