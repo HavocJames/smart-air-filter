@@ -1,6 +1,9 @@
 #include <Arduino.h>
 #include <WiFi.h>
 #include "ThingSpeak.h"
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(2, 3); // RX, TX
 
 const char* ssid = "XXXXXXXX";   // your network SSID (name) 
 const char* password = "XXXX0000";   // your network password
@@ -22,15 +25,15 @@ void setup() {
 }
 void loop()
 {
-  if(Serial.available()){
+  if(mySerial.available()){
   String rxString = "";
   String strArr[3]; //Set the size of the array to equal the number of values you will be receiveing.
   //Keep looping until there is something in the buffer.
-  while (Serial.available()) {
+  while (mySerial.available()) {
     //Delay to allow byte to arrive in input buffer.
     delay(2);
     //Read a single character from the buffer.
-    char ch = Serial.read();
+    char ch = mySerial.read();
     //Append that single character to a string.
     rxString+= ch;
   }
