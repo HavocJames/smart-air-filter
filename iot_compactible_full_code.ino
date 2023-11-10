@@ -3,10 +3,10 @@
 #include <Wire.h>
 #include <MQUnifiedsensor.h>
 
-#define Board "Arduino UNO"
-#define Pinmq3 A0
-#define Pinmq135 A1
-#define Pinmq9 A2
+#define Board ("Arduino UNO")
+#define Pinmq3 (A0)
+#define Pinmq135 (A1)
+#define Pinmq9 (A2)
 #define RelayPinbio (8)
 #define RelayPinphy (7)
 #define RelayPinche (4)
@@ -38,7 +38,7 @@ float dustDensity = 0;
 
 String str;
 
-SoftwareSerial espSerial(5, 6);//(rxPin, txPin, inverse_logic)
+SoftwareSerial espSerial(0, 1);//(rxPin, txPin, inverse_logic)
 
 
 void setup()
@@ -107,20 +107,14 @@ void setup()
   Serial.print(" | ");
   Serial.print(MQ9calcR0 / 10);
   Serial.println(" |");
-  
   /*****************************  MQ CAlibration *************************/
 
-  Serial.begin(115200);
-  espSerial.begin(115200);
+  mySerial.begin(9600);
 
 }
 void loop() 
 {
-  MQ3.update();// Update data, the arduino will read the voltage from the analog pin
-  MQ135.update();
-  MQ9.update();
-  MQ3.serialDebug();// Will print the table on the serial port
-  /*
+ /*
   Exponential regression of mq3:
   Gas    | a      | b
   LPG    | 44771  | -3.245
@@ -239,6 +233,7 @@ void loop()
   float chemical = (Benzene + Hexane + CO2 + Acetone + FG) / 2;
 
  //serial displaing
+  Serial.println(".............");
   Serial.print("Dust Density: "); Serial.println(dustDensity);
   Serial.print("biological: "); Serial.println(biological);
   Serial.print("Alcohol: "); Serial.println(Alcohol);
@@ -292,7 +287,7 @@ void loop()
   delay(2000);
   
   str =String(biological)+String(",")+String(chemical)+String(",")+String(dustDensity);
-  espSerial.println(str);
+  mySerial.println(str);
   delay(1000);
 }
  
